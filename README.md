@@ -12,8 +12,8 @@ A clone of the productivity chrome app [Momentum](https://chrome.google.com/webs
 
 ## Try it out
 
-<a href="https://ice-momonton.netlify.app/" target="_blank">https://ice-momonton.netlify.app/</a>
+[https://ice-momonton.netlify.app/](https://ice-momonton.netlify.app/)
 
-## Try it out
+## Reference
 
-<a href="https://nomadcoders.co/javascript-for-beginners" target="_blank">[https://nomadcoders.co/javascript-for-beginners</a>
+[https://nomadcoders.co/javascript-for-beginners](https://nomadcoders.co/javascript-for-beginners)
