@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@700&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <title>Browser</title>
+</head>
+
+<body>
+    <!-- top to center -->
+    <section class="center" style="position: relative">
+        <div id="weatherinfo" title="">
+            <span></span>
+            <span></span>
+        </div>
+        <div id="logout-form" class="hidden">
+            <button class="logout">LogOut</button>
+        </div>
+        <div>
+            <h2 id="clock">00:00:00</h2>
+        </div>
+        <div style="height:12vh">
+            <form id="login-form" class="hidden">
+                <input class="input" required maxlength="15" type="text" placeholder="What is your name?" />
+                <!-- <button>Log In</button> -->
+            </form>
+            <h1 id="greeting" class="hidden">
+                </p>
+        </div>
+        <div class="todo-div">
+            <form id="todo-form">
+                <input type="text" required maxlength="20" placeholder="Write a To Do and Press Enter">
+            </form>
+        </div>
+    </section>
+
+    <!-- to_do section -->
+    <section class="todo-section">
+        <div>
+            <ul id="todo-list" style="padding-left: 0px;"></ul>
+        </div>
+    </section>
+
+    <!-- bottom -->
+    <section class="bottom">
+        <div id="quote"></div>
+        <div id="author"></div>
+    </section>
+
+    <!-- script -->
+    <script src="js/config.js"></script>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/focus.js"></script>
+    <script src="js/remover.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/touch.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/background.js"></script>
+
+</body>
+
+</html>
