@@ -1,0 +1,329 @@
+.hidden {
+    display: none;
+}
+
+.transparent {
+    opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+#weatherinfo {
+    position: absolute;
+    left: 2.0vh;
+    top: 1.5vh;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 500;
+    color:rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 1.4vh;
+    font-size: 3.0vh;
+    height: 4.6vh;
+    border-radius: 100px;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 1vh;
+    align-items: center;
+    font-family: 'Satisfy', cursive;;
+}
+
+#search-div {
+    position: absolute;
+    display: grid;
+    grid-auto-flow: column;
+    top: 2.5vh;
+    cursor: pointer;
+}
+
+/* 넓이가 800px 미만일 때 안보이게 */
+@media (max-width:800px) and (min-height:500px) {
+    #search-div {
+        display: none;
+    }
+}
+
+#search-form input[type=text]:focus {
+    border-bottom: 0.23vh solid rgb(0, 0, 0);
+    transition-duration: 0.3s;
+}
+
+#search-form input[type=text]:focus::placeholder {
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+#search-form input[type=text] {
+    width: 20vh;
+    height: 3.2vh;
+    font-size: 2.0vh;
+    font-weight: lighter;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-bottom: 0.1vh solid rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
+    /* 가운데부터 글씨 정렬 */
+    text-align: center;
+    /* 글씨 중앙 정렬 */
+    vertical-align: middle;
+    /* bold */
+    outline: none;
+    margin-top: 1vh;
+}
+
+#search-form input[type=text]::placeholder {
+    opacity: 1;
+    color: rgb(0, 0, 0);
+    /* center the placeholder text */
+    text-align: center;
+    font-size: 3.0vh;
+    font-weight: 500;
+    /* vertical center the placeholder text */
+    vertical-align: middle;
+    font-family: 'Satisfy', cursive;
+
+    transition-property: opacity;
+    transition-duration: 0.5s;
+}
+
+.input[type=text] {
+    width: 35vh;
+    height: 5.5vh;
+    font-size: 2.3vh;
+    color: rgb(8, 10, 19);
+    border: 2.8px solid rgba(9, 16, 67, 0.719);
+    background-color: rgba(255, 255, 255, 0.589);
+    /* 가운데부터 글씨 정렬 */
+    text-align: center;
+    /* 글씨 중앙 정렬 */
+    vertical-align: middle;
+    /* bold */
+    font-weight: bold;
+    outline: none;
+    opacity: 0.95;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    border-radius: 50px;
+}
+
+.input[type=text]::placeholder {
+    color: rgb(9, 16, 67);
+    /* center the placeholder text */
+    text-align: center;
+    font-size: 2.3vh;
+    font-weight: normal;
+    /* vertical center the placeholder text */
+    vertical-align: middle;
+    opacity: 1;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+.input[type=text]:focus {
+    outline: none;
+    border: 3px solid rgba(10, 14, 41, 0.719);
+}
+
+.input[type=text]:focus::placeholder {
+    color: rgb(10, 14, 41);
+
+    opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+.todo-div {
+    width: 35vh;
+    text-align: center;
+    border-radius: 0;
+}
+
+#todo-form input[type=text] {
+    width: 35vh;
+    height: 4.0vh;
+    font-size: 2.3vh;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.900);
+    border: none;
+    border-bottom: 0.25vh solid rgba(0, 0, 0, 0.698);
+    background-color: rgba(255, 255, 255, 0);
+    /* 가운데부터 글씨 정렬 */
+    text-align: center;
+    /* 글씨 중앙 정렬 */
+    vertical-align: middle;
+    /* bold */
+    outline: none;
+    margin-top: 1vh;
+}
+
+#todo-form input[type=text]::placeholder {
+    color: rgba(0, 0, 0, 0.900);
+    /* center the placeholder text */
+    text-align: center;
+    font-size: 2.0vh;
+    font-weight: bold;
+    /* vertical center the placeholder text */
+    vertical-align: middle;
+    opacity: 1;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+#todo-form input[type=text]:focus {
+    color: rgba(0, 0, 0, 0.900);
+}
+
+#todo-form input[type=text]:focus::placeholder {
+    opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 이미지 비율 유지하면서 꽉 채우기 */
+    object-fit: cover;
+    background-color: rgb(9, 16, 67);
+    background-position: center;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+#clock {
+    font-size: 13vh;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    opacity: 0.9;
+    margin-top: 0;
+    margin-bottom: 4vh;
+}
+
+.list {
+    font-size: 2.2vh;
+    padding: 0.3vh;
+    font-weight: 520;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.582);
+    border-bottom: 0.1vh solid rgba(0, 0, 0, 0.507);
+    border-radius: 10px 100px / 120px;
+    list-style-position: inside;
+    padding-left: 1.1vh;
+    margin-bottom: 0.2vh;
+    list-style: square;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+}
+
+.remover {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+    text-align: right;
+    padding-right: 1.0vh;
+
+    transition-property: opacity;
+    transition-duration: 0.1s;
+}
+
+#todo-list li:last-child {
+    border-bottom: none;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 55%;
+}
+
+.todo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 37%;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 8%
+}
+
+#quote {
+    font-size: 2.5vh;
+    color: rgb(0, 0, 0);
+    font-weight: 530;
+    opacity: 0.95;
+    margin-bottom: 0;
+    margin-right: 15px;
+    margin-left: 15px;
+    /* text center */
+    text-align: center;
+    font-family: 'Caveat', cursive;
+}
+
+#author {
+    font-size: 1.7vh;
+    color: rgb(0, 0, 0);
+    font-weight: 550;
+    opacity: 0.9;
+    /* text center */
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-family: 'Satisfy', cursive;
+}
+
+#greeting {
+    font-size: 5.5vh;
+    height: 5.5vh;
+    margin-top: 2vh;
+    margin-bottom: 1.5vh;
+}
+
+#logout-form {
+    position: absolute;
+    right: 2.7vh;
+    top: 2.2vh;
+}
+
+.logout {
+    color:rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 1vh;
+    font-size: 2.7vh;
+    height: 5vh;
+    width: 10vh;
+    border-radius: 30% / 60%;
+    font-family: 'Satisfy', cursive;
+}
+
+div {
+    display: block;
+}
+
+html, body{
+    height: 100%;
+    /* 크롬 기반의 브라우저는 body에 기본적으로 margin이 붙어있음 */
+    margin: 0;
+    overflow: clip;
+}
