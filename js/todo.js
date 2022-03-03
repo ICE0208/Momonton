@@ -25,6 +25,8 @@ function paintToDo(toDoObj){
 }
 
 function handleToDoSubmit(event) {
+    event.preventDefault();
+    console.log("submit");
     const newToDo = toDoInput.value;
     const listLength = document.querySelectorAll(".list").length;
     toDoInput.value = BLANK_TEXT;
@@ -32,7 +34,6 @@ function handleToDoSubmit(event) {
         id: Date.now(),
         text: newToDo
     }
-    event.preventDefault();
 
     if (listLength >= 7) {
         alert("할 일은 최대 7개까지 추가할 수 있습니다.");

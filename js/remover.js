@@ -23,6 +23,7 @@ function removerSetting(){
 
         saveToDoObjs();
 
-        list.remove();
+        list.classList.add("transparent");
+        setTimeout(() => list.remove(), 300);
     })
 }

@@ -4,6 +4,9 @@
 
 .transparent {
     opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
 }
 
 #weatherinfo {
@@ -27,13 +30,70 @@
     font-family: 'Satisfy', cursive;;
 }
 
+#search-div {
+    position: absolute;
+    display: grid;
+    grid-auto-flow: column;
+    top: 2.5vh;
+    cursor: pointer;
+}
+
+/* 넓이가 800px 미만일 때 안보이게 */
+@media (max-width:800px) and (min-height:500px) {
+    #search-div {
+        display: none;
+    }
+}
+
+#search-form input[type=text]:focus {
+    border-bottom: 0.23vh solid rgb(0, 0, 0);
+    transition-duration: 0.3s;
+}
+
+#search-form input[type=text]:focus::placeholder {
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+#search-form input[type=text] {
+    width: 20vh;
+    height: 4.0vh;
+    font-size: 2.0vh;
+    font-weight: lighter;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-bottom: 0.1vh solid rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
+    /* 가운데부터 글씨 정렬 */
+    text-align: center;
+    /* 글씨 중앙 정렬 */
+    vertical-align: middle;
+    /* bold */
+    outline: none;
+    margin-top: 1vh;
+}
+
+#search-form input[type=text]::placeholder {
+    opacity: 1;
+    color: rgb(0, 0, 0);
+    /* center the placeholder text */
+    text-align: center;
+    font-size: 3.0vh;
+    font-weight: 500;
+    /* vertical center the placeholder text */
+    vertical-align: middle;
+    font-family: 'Satisfy', cursive;
+
+    transition-property: opacity;
+    transition-duration: 0.5s;
+}
+
 .input[type=text] {
     width: 35vh;
     height: 5.5vh;
     font-size: 2.3vh;
     color: rgb(8, 10, 19);
     border: 2.8px solid rgba(9, 16, 67, 0.719);
-    border-radius: 10% / 50%;
     background-color: rgba(255, 255, 255, 0.589);
     /* 가운데부터 글씨 정렬 */
     text-align: center;
@@ -45,6 +105,7 @@
     opacity: 0.95;
     margin-top: 2vh;
     margin-bottom: 1vh;
+    border-radius: 50px;
 }
 
 .input[type=text]::placeholder {
@@ -55,20 +116,30 @@
     font-weight: normal;
     /* vertical center the placeholder text */
     vertical-align: middle;
+    opacity: 1;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
 }
 
 .input[type=text]:focus {
-    border: 3px solid rgba(10, 14, 41, 0.719);
     outline: none;
+    border: 3px solid rgba(10, 14, 41, 0.719);
 }
 
 .input[type=text]:focus::placeholder {
     color: rgb(10, 14, 41);
+
+    opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
 }
 
 .todo-div {
     width: 35vh;
     text-align: center;
+    border-radius: 0;
 }
 
 #todo-form input[type=text] {
@@ -97,10 +168,22 @@
     font-weight: bold;
     /* vertical center the placeholder text */
     vertical-align: middle;
+    opacity: 1;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
 }
 
 #todo-form input[type=text]:focus {
     color: rgba(0, 0, 0, 0.900);
+}
+
+#todo-form input[type=text]:focus::placeholder {
+    opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+
 }
 
 .background {
@@ -149,6 +232,9 @@
     cursor: pointer;
     text-align: right;
     padding-right: 1.0vh;
+
+    transition-property: opacity;
+    transition-duration: 0.1s;
 }
 
 #todo-list li:last-child {

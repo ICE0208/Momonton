@@ -7,7 +7,6 @@ function apikeyError(){
     const weatherinfo = document.querySelector("#weatherinfo");
     // set #weatherinfo's title
     weatherinfo.title = "API Key Error";
-
 }
 
 function onGeoOk(position){
@@ -33,7 +32,14 @@ function onGeoOk(position){
     });
 }
 function onGeoError(){
-    alert("Can't Find You");
+    const city = document.querySelector("#weatherinfo span:first-child");
+    city.innerText = "Earth ,";
+    const weather = document.querySelector("#weatherinfo span:last-child");
+    weather.innerText = "Global Warming";
+
+    const weatherinfo = document.querySelector("#weatherinfo");
+    // set #weatherinfo's title
+    weatherinfo.title = "Can't Find your location";
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
