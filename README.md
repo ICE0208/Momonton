@@ -13,7 +13,7 @@ A clone of the productivity chrome app [Momentum](https://chrome.google.com/webs
 
 ## Try it out
 
-[https://ice-momonton.netlify.app/](https://ice-momonton.netlify.app/)
+[https://ice0208.github.io/momonton-clone/](https://ice0208.github.io/momonton-clone/)
 
 ## Reference
 
