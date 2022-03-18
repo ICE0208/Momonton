@@ -1,3 +1,5 @@
+const WEATHER_APIKEY = "a8d102311281b30cfe15e9eafd971be5";
+
 function apikeyError(){
     const city = document.querySelector("#weatherinfo span:first-child");
     city.innerText = "Earth ,";
@@ -10,8 +12,6 @@ function apikeyError(){
 }
 
 function onGeoOk(position){
-    // You need to create js/config.js file with your API key
-    // const WEATHER_APIKEY = `${Your API Key}`;
     if (typeof(WEATHER_APIKEY) === 'undefined') {
         console.log("WEATHER_APIKEY Is Not Defined");
         return apikeyError();
